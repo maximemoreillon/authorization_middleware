@@ -1,4 +1,9 @@
 {
   "name": "@moreillon/authorization_middleware",
-  "version": "0.0.1"
+  "version": "0.1.0",
+  "description": "A simple authentication middleware for Express",
+  "main": "authorization_middleware.js",
+  "dependencies": {
+    "jsonwebtoken": "^8.5.1"
+  }
 }
