@@ -33,6 +33,11 @@ exports.middleware = (req, res, next) => {
     }
 
   }
+
+  // if using cookie-session
+  else if('username' in req.session){
+    next();
+  }
   else {
     // The client is not providing anything to authenticate
     res.status(401)
