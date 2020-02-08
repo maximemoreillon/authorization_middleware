@@ -31,7 +31,7 @@ exports.middleware = (req, res, next) => {
   // Authorization using cookieSession
   else if('session' in req){
     if('username' in req.session) next();
-    else res.status(401).('Appropriate session variable is not set')
+    else res.status(401).send('Appropriate session variable is not set')
   }
 
   else {
