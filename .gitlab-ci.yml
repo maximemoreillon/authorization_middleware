@@ -1,0 +1,10 @@
+stages:
+  - publish
+
+
+
+
+publishing:
+  stage: publish
+  script:
+    - ls

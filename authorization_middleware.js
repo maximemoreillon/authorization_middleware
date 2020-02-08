@@ -29,9 +29,7 @@ exports.middleware = (req, res, next) => {
     else {
       console.log(new Error("secret is not set"))
       res.status(500)
-
     }
-
   }
 
   // if using cookie-session
@@ -42,13 +40,11 @@ exports.middleware = (req, res, next) => {
     else {
       res.status(401)
     }
-
   }
 
   else {
     // The client is not providing anything to authenticate
     res.status(401)
   }
-
 
 }
