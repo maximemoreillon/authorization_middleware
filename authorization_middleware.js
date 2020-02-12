@@ -20,18 +20,12 @@ exports.middleware = (req, res, next) => {
 
     // verify the token
     jwt.verify(token, exports.secret, (err, decoded) => {
-      if(err) res.status(500).send('Error decoding token')
+      if(err) res.status(500).send(err)
 
       if(decoded) next(); // Simply allow any user with a valid token
       else res.status(401).send('Token is invalid')
     })
 
-  }
-
-  // Authorization using cookieSession
-  else if(req.session){
-    if(req.session.username) next()
-    else res.status(401).send('Appropriate session variable is not set')
   }
 
   // The client is not providing anything to authenticate
