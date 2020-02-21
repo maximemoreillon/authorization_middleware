@@ -20,10 +20,9 @@ exports.middleware = (req, res, next) => {
 
     // verify the token
     jwt.verify(token, exports.secret, (err, decoded) => {
-      if(err) res.status(500).send(err)
+      if(err) return res.status(400).send(err)
 
-      if(decoded) next(); // Simply allow any user with a valid token
-      else res.status(401).send('Token is invalid')
+      next(); // Simply allow any user with a valid token
     })
 
   }
