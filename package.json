@@ -4,6 +4,6 @@
   "description": "A simple authentication middleware for Express",
   "main": "authorization_middleware.js",
   "dependencies": {
-    "jsonwebtoken": "^8.5.1"
+    "jsonwebtoken": "^9.0.0"
   }
 }
